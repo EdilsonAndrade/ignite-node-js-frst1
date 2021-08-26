@@ -28,12 +28,9 @@ class CategoryRepository implements ICategoryRepository {
             description,
         });
         this.categories.push(category);
-
-        console.log(this.categories);
     }
 
     list(): Category[] {
-        console.log(this.categories);
         return this.categories;
     }
 
