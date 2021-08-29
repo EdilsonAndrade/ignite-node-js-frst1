@@ -11,4 +11,8 @@ categoriesRouter.get("/", (request, response) => {
     return listCategoryController.handle(request, response);
 });
 
+categoriesRouter.get("/:id", (request, response) => {
+    const { id } = request.params;
+    return response.json(id);
+});
 export { categoriesRouter };
