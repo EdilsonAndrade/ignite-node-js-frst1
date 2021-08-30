@@ -32,6 +32,9 @@ class LoadCategoryUseCase {
                     return resolv(categories);
                 });
 
+            fs.rm(file.path, () => {
+                console.log(`File ${file.path} was removed`);
+            });
             return categories;
         });
     }
