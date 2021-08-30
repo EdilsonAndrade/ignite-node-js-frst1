@@ -144,10 +144,15 @@
                 "summary": "Upload a file to import categories",
                 "requestBody": {
                     "content": {
-                        "multipart/form-data:": {
+                        "multipart/form-data": {
                             "schema": {
-                                "type": "string",
-                                "format": "binary"
+                                "type": "object",
+                                "properties": {
+                                    "file": {
+                                        "type": "string",
+                                        "format": "binary"
+                                    }
+                                }
                             }
                         }
                     }
