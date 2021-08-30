@@ -1,10 +1,10 @@
 import {
-    ICategoryRepository,
     ICategoryDTO,
+    ICategoryRepository,
 } from "../../repository/ICategoryRepository";
 
 class CreateCategoryUsecase {
-    constructor(private categoryRepository: ICategoryRepository) { }
+    constructor(private categoryRepository: ICategoryRepository) {}
 
     execute({ name, description }: ICategoryDTO): void {
         const categoryExists = this.categoryRepository.findByName(name);
@@ -15,7 +15,6 @@ class CreateCategoryUsecase {
 
         this.categoryRepository.save({
             name,
-
             description,
         });
     }
